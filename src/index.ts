@@ -2,7 +2,7 @@ import "./config/args"
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js"
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
-import { getSentryEventMessage } from "./utils/getSentryEvent"
+import { getSentryEventMessage } from "./utils/getSentryEvent.js"
 import { z } from "zod"
 
 const server = new McpServer({

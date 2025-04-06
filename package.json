@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Model Context Protocol server for Sentry integration",
   "main": "dist/index.js",
+  "type": "module",
   "bin": {
-    "sentry-mcp": "./dist/index.js"
+    "sentry-mcp-server": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
