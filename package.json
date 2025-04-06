@@ -1,5 +1,5 @@
 {
-  "name": "sentry-mcp-server",
+  "name": "@jaejae/sentry-mcp-server",
   "version": "1.0.0",
   "description": "Model Context Protocol server for Sentry integration",
   "main": "dist/index.js",
