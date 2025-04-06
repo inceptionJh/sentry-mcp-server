@@ -1,11 +1,14 @@
 {
-  "name": "@jaejae/sentry-mcp-server",
+  "name": "@jaejae-json/sentry-mcp-server",
   "version": "1.0.0",
   "description": "Model Context Protocol server for Sentry integration",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
     "sentry-mcp-server": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "tsc",
