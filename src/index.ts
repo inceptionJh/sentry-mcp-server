@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import "./config/args"
 
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js"
