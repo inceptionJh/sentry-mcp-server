@@ -1,7 +1,7 @@
 import { args } from "../config/args.js"
 
-export async function getSentryEventMessage(eventId: string) {
-  const url = `https://sentry.io/api/0/projects/${args.SENTRY_ORG_ID}/${args.SENTRY_PROJECT_ID}/events/${eventId}/`
+export async function getSentryEventMessage(issueId: number, eventId: string) {
+  const url = `https://sentry.io/api/0/organizations/${args.SENTRY_ORG_ID}/issues/${issueId}/events/${eventId}/`
 
   const response = await fetch(url, {
     headers: {

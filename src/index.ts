@@ -12,16 +12,32 @@ const server = new McpServer({
 	version: "1.0.0",
 })
 
-server.tool(
-	"Get Sentry Event",
-	"Retrieves event information from Sentry",
-	{ eventId: z.string() }, async ({ eventId }) => {
-  const sentryEventMessage = await getSentryEventMessage(eventId)
+const toolName = "Get Sentry Event"
+const toolDescription = `
+Retrieves event information from Sentry
 
-  return {
-    content: [sentryEventMessage],
-  }
-})
+
+URL structure for paramsSchema
+https://daangn.sentry.io/issues/:issueId/events/:eventId/
+
+
+Example
+https://daangn.sentry.io/issues/1234567890/events/1234567890/
+issueId = 1234567890, eventId = 1234567890
+`
+
+server.tool(
+	toolName,
+	toolDescription,
+	{ issueId: z.number(), eventId: z.string() },
+	async ({ issueId, eventId }) => {
+		const sentryEventMessage = await getSentryEventMessage(issueId, eventId)
+
+		return {
+			content: [sentryEventMessage],
+		}
+	},
+)
 
 async function main() {
 	const transport = new StdioServerTransport()
