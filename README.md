@@ -16,10 +16,10 @@
     "sentry": {
       "command": "npx",
       "args": [
-        "sentry-mcp-server",
-        "--SENTRY_ORG_ID=ORG_ID",
-        "--SENTRY_PROJECT_ID=PROJECT_ID",
-        "--SENTRY_API_TOKEN=API_TOKEN"
+        "-y",
+        "@jaejae-json/sentry-mcp-server",
+        "--SENTRY_ORG_ID=00000",
+        "--SENTRY_API_TOKEN=sntryu_**********************"
       ]
     }
   }
