@@ -9,10 +9,10 @@ import { z } from "zod"
 
 const server = new McpServer({
 	name: "Sentry MCP Server",
-	version: "1.0.0",
+	version: "2.1.0",
 })
 
-const toolName = "Get Sentry Event"
+const toolName = "Get_Sentry_Event"
 const toolDescription = `
 Retrieves event information from Sentry
 
